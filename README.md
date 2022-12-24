@@ -1,8 +1,8 @@
 <p align="center">
   <a href="" rel="noopener">
 </p>
-<img align="center" width="80% src="./website/img/Weather-app.PNG">
- <img src="./website/img/Weather-app.PNG" alt="My cool app"/>
+<img align="center" width="80% src="./website/img/weather app.PNG">
+ <img src="./website/img/weather app.PNG" alt="My app"/>
 <h3 align="center">weather-journal</h3>
 
 <p align="center"> 
@@ -28,10 +28,10 @@ you need these packages to run the server successfully.
 - cors
 - pre-installed latest node-version
 
-
 ### Installing
 - npm install.
 - node server.js
+
 ## ⛏️ Built Using <a name = "built_using"></a>
 
 - [Vanilla js](https://www.javascript.com/) - programming language
