@@ -1,24 +1,25 @@
 body {
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    padding: 20px;
     background: url(img/we.jpeg);
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
   }
   .headline{
-    color: white;
-    font-size: 25px;
-    background-color: #0a113a;
-    padding: 10px;
+    color: black;
+    font-size: 36px;
+    /* background-color: #fed93c; */
+    padding: 25px;
     text-align: center;
     cursor: pointer;
+    /* background-color: #fed93c; */
   }
   #zip,
   #feelings,
   #generate{
-    background: #17053866;
-    margin: 60px auto 0px;
+    background: #fed93c;
+    margin: 95px auto 0px;
     width: 30%;
     outline: none;
     border: none;
@@ -27,12 +28,12 @@ body {
     text-align: center;
     color: white;
     display: block;
-    font-size: 15px;
+    font-size: 20px;
     resize: none;
   }
   #zip::placeholder,
   #feelings::placeholder {
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: sans-serif;
     line-height: 38px;
   }

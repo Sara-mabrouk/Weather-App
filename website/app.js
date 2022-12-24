@@ -5,38 +5,28 @@ const apiKey = ",&appid=2eec3ea5cf5a6c6130efa46ca43c79d0&units=metric";
 const server = "http://127.0.0.1:5000";
 const error = document.getElementById("error");
 const genData = () => { 
-  const zip = document.getElementById("zip").value;
-  const feelings = document.getElementById("feelings").value;
-
-  weatherData(zip).then((data) => {
+  let countryCode = document.getElementById("zip").value;
+  let mood = document.getElementById("feelings").value;
+  weatherData(countryCode).then((data) => {
     if (data) {
       const {
         main: { temp },
         name: city,
         weather: [{ description }],
       } = data;
-
       const info = {
-        newDate,
-        city,
-        temp: Math.round(temp), // to get integer number
-        description,
-        feelings,
+        newDate,city,temp: Math.round(temp), description,mood,
       };
-
       postData(server + "/add", info);
-
       updatingUI();
       document.getElementById('entry').style.opacity = 1;
     }
   });
 };
-
 document.getElementById("generate").addEventListener("click", genData);
-
-const weatherData = async (zip) => {
+const weatherData = async (countryCode) => {
   try {
-    const res = await fetch(baseURL + zip + apiKey);
+    const res = await fetch(baseURL + countryCode + apiKey);
     const data = await res.json();
 
     if (data.cod != 200) {
@@ -47,7 +37,7 @@ const weatherData = async (zip) => {
 
     return data;
   } catch (err) {
-    console.log(err);
+    console.log('Error Found',err);
   }
 };
 const postData = async (url = "", info = {}) => {
@@ -63,8 +53,8 @@ const postData = async (url = "", info = {}) => {
     const newData = await res.json();
     console.log(`You just saved`, newData);
     return newData;
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log('Error In Post Data',error);
   }
 };
 const updatingUI = async () => {
@@ -74,10 +64,10 @@ const updatingUI = async () => {
 
     document.getElementById("date").innerHTML = savedData.newDate;
     document.getElementById("city").innerHTML = savedData.city;
-    document.getElementById("temp").innerHTML = savedData.temp + '&degC';
+    document.getElementById("temp").innerHTML = savedData.temp;
     document.getElementById("description").innerHTML = savedData.description;
-    document.getElementById("content").innerHTML = savedData.feelings;
-  } catch (err) {
-    console.log(err);
+    document.getElementById("content").innerHTML = savedData.mood;
+  } catch (erorr) {
+    console.log("UpdatinUI",erorr);
   }
 };

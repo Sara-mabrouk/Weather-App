@@ -6,7 +6,7 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "name": "weather-journal-app",
   "description": "## Overview This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI.",
@@ -14,5 +14,13 @@
   "main": "server.js",
   "author": "",
   "license": "ISC",
-  "keywords": []
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sara-mabrouk/Weather-App_js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sara-mabrouk/Weather-App_js/issues"
+  },
+  "homepage": "https://github.com/Sara-mabrouk/Weather-App_js#readme"
 }
