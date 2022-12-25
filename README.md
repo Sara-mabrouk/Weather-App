@@ -17,7 +17,7 @@ The project is aimed to imitate weather apps that exist in the market. It adds a
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
 - click npm i to download all the necessary node_modules needed for this project.
-- click node serveer.js to start the local server on port 4000.
+- click node serveer.js to start the local server on port 5000.
 - go to the localhost followed by the port to see the project.
 
 ### Prerequisites
