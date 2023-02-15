@@ -15,8 +15,6 @@ const postData = (req, res) => {
     res.status(200).send(projectData);
   }
 app.post("/add", postData);
-const port = 5000;
-const localhost = "127.0.0.1";
 const listening = () =>
-console.log(`Server running at http://${localhost}:${port}/`);
+console.log(`Server running at https://weather-app-0k8k.onrender.com`);
 app.listen(port, listening);

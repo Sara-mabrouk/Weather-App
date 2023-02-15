@@ -2,7 +2,7 @@ let d = new Date();
 let newDate = d.toDateString();
 const baseURL = "https://api.openweathermap.org/data/2.5/weather?zip=";
 const apiKey = ",&appid=2eec3ea5cf5a6c6130efa46ca43c79d0&units=metric";
-const server = "http://127.0.0.1:5000";
+const server = "https://weather-app-0k8k.onrender.com";
 const error = document.getElementById("error");
 const genData = () => { 
   let countryCode = document.getElementById("zip").value;
